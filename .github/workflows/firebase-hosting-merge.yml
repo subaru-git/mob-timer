@@ -15,9 +15,6 @@ jobs:
       - uses: SpicyPizza/create-envfile@v1
         with:
           envkey_SKIP_PREFLIGHT_CHECK: true
-      - run: ls -la
-      - run: pwd
-      - run: cat .env
       - run: yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
