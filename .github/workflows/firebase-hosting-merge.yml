@@ -10,14 +10,14 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - run: yarn --frozen-lockfile
       - uses: SpicyPizza/create-envfile@v1
         with:
           envkey_SKIP_PREFLIGHT_CHECK: true
       - run: ls -la
       - run: pwd
       - run: cat .env
-      - uses: actions/checkout@v2
-      - run: yarn --frozen-lockfile
       - run: yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
