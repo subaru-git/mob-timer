@@ -16,13 +16,15 @@ const useStyles = makeStyles(() =>
 
 export interface CountdownTimerProps {
   end: Date;
-  onFinish?: () => void;
+  onFinish: () => void;
 }
 
-const CountdownTimer: FC<{
-  end: Date;
-  onFinish?: () => void;
-}> = ({ end, onFinish }) => {
+const CountdownTimer: FC<CountdownTimerProps> = ({
+  end,
+  onFinish = () => {
+    /* nop */
+  },
+}) => {
   const classes = useStyles();
 
   return (
@@ -31,16 +33,15 @@ const CountdownTimer: FC<{
         date={end}
         renderer={({ minutes, seconds }) => {
           const text = `${zeroPad(minutes)} : ${zeroPad(seconds)}`;
-          const speed = text.length;
 
           return (
             <div className={classes.main}>
-              <Wave text={text} speed={speed} />
+              <Wave text={text} speed={text.length} />
             </div>
           );
         }}
         onComplete={() => {
-          if (onFinish) onFinish();
+          onFinish();
           document.title = 'Mob Timer';
         }}
         onTick={({ minutes, seconds }) => {
