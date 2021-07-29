@@ -12,7 +12,5 @@ test('renders learn react link', () => {
   const component = shallow(<CountdownTimer end={new Date()} />);
   expect(component.text()).toMatch(/Countdown/);
   expect(component.find('*')).toHaveLength(2);
-  expect(component.getElements()[0].props.children.props.intervalDelay).toBe(
-    1000,
-  );
+  expect(component.getElements()[0].props.children.props.intervalDelay).toBe(1000);
 });

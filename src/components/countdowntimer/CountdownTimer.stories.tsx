@@ -7,9 +7,7 @@ export default {
   title: 'CountdownTimer',
 };
 
-const Template: Story<CountdownTimerProps> = (args: CountdownTimerProps) => (
-  <CountdownTimer {...args} />
-);
+const Template: Story<CountdownTimerProps> = (args: CountdownTimerProps) => <CountdownTimer {...args} />;
 
 const timerdate = new Date();
 timerdate.setSeconds(120);
