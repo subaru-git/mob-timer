@@ -1,6 +1,5 @@
 import React from 'react';
-import { cleanup, render, screen } from '@testing-library/react';
-import renderer from 'react-test-renderer';
+import { cleanup } from '@testing-library/react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { CountdownTimer } from './CountdownTimer';
