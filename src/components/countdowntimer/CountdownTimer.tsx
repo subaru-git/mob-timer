@@ -14,6 +14,11 @@ const useStyles = makeStyles(() =>
   }),
 );
 
+export interface CountdownTimerProps {
+  end: Date;
+  onFinish?: () => void;
+}
+
 const CountdownTimer: FC<{
   end: Date;
   onFinish?: () => void;
