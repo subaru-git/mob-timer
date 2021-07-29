@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 
 afterEach(cleanup);
 
-test('renders learn react link', () => {
+test('render without exception', () => {
   const component = shallow(<CountdownTimer end={new Date()} />);
   expect(component.text()).toMatch(/Countdown/);
   expect(component.find('*')).toHaveLength(2);
