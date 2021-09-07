@@ -55,6 +55,7 @@ module.exports = {
     quotes: ['error', 'single', { avoidEscape: true }],
     'require-yield': 'error',
     semi: ['error', 'always'],
+    'no-empty-function': 'off',
     // for react-app-env.d.ts (https://github.com/facebook/create-react-app/issues/6560)
     'spaced-comment': [
       'error',
@@ -72,6 +73,7 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/prefer-interface': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
 
     // airbnb
     'no-restricted-syntax': [
