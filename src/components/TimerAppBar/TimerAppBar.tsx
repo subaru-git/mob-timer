@@ -65,17 +65,6 @@ const TimerAppBar: FC<TimerAppBarProps> = ({ handleDrawerOpen = () => {}, menu =
           </Link>
           {menu ? (
             <>
-              <div className={classes.billingBase}>
-                <iframe
-                  className={classes.billing}
-                  title="plog"
-                  src="https://widget.plog.cash"
-                  data-plog
-                  data-id="cyDeevY8a7z46FVDJx9M"
-                  frameBorder={0}
-                  scrolling="no"
-                />
-              </div>
               <Tooltip
                 title={tooltip}
                 onClose={() => {
